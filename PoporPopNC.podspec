@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
     s.name             = 'PoporPopNC'
     s.version          = '0.0.1'
-    s.summary          = '在UINavigationController点击返回或者侧滑手势的时候,拦截系统函数,方法在PoporPopCheckDelegate中.本来是使用QMUI_iOS的,但是QMUI_iOS的触发机制有问题,方法名称是模仿的QMUI.'
+    s.summary          = 'hook UINavigationController pop action'
     
     # This description is used to generate tags and improve search results.
     #   * Think: What does it do? Why did you write it? What is the focus?
@@ -17,7 +17,9 @@ Pod::Spec.new do |s|
     #   * Write the description between the DESC delimiters below.
     #   * Finally, don't worry about the indent, CocoaPods strips it!
     
-    s.description      = 'hook UINavigationController pop action'
+    s.description      = '在UINavigationController点击返回或者侧滑手势的时候,拦截系统函数,方法在PoporPopCheckDelegate中.本来是使用QMUI_iOS的,但是QMUI_iOS的触发机制有问题,方法名称是模仿的QMUI.\
+    \n允许修改允许修改返回按钮文字.\
+    \n允许修改是否允许push same vc.'
     
     s.homepage         = 'https://github.com/popor/PoporPopNC'
     s.license          = { :type => 'MIT', :file => 'LICENSE' }
