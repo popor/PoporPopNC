@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1872926320DB814C008AE335 /* CheckVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1872926220DB814C008AE335 /* CheckVC.m */; };
-		1872926920DBB1E5008AE335 /* PoporPopNC-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1872926820DBB1E5008AE335 /* PoporPopNC-Info.plist */; };
+		1872926920DBB1E5008AE335 /* PoporPopNC-Info.1plist in Resources */ = {isa = PBXBuildFile; fileRef = 1872926820DBB1E5008AE335 /* PoporPopNC-Info.1plist */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
@@ -41,7 +41,7 @@
 /* Begin PBXFileReference section */
 		1872926120DB814C008AE335 /* CheckVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CheckVC.h; sourceTree = "<group>"; };
 		1872926220DB814C008AE335 /* CheckVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CheckVC.m; sourceTree = "<group>"; };
-		1872926820DBB1E5008AE335 /* PoporPopNC-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "PoporPopNC-Info.plist"; sourceTree = "<group>"; };
+		1872926820DBB1E5008AE335 /* PoporPopNC-Info.1plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "PoporPopNC-Info.1plist"; sourceTree = "<group>"; };
 		23DF9D2DC2A55BD3F958529B /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		24538A63B827F07AD187CCA9 /* Pods_PoporPopNC_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PoporPopNC_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58A195388D20070C39A /* PoporPopNC_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PoporPopNC_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -158,7 +158,7 @@
 		6003F593195388D20070C39A /* Example for PoporPopNC */ = {
 			isa = PBXGroup;
 			children = (
-				1872926820DBB1E5008AE335 /* PoporPopNC-Info.plist */,
+				1872926820DBB1E5008AE335 /* PoporPopNC-Info.1plist */,
 				1872926020DB7E88008AE335 /* other */,
 				6003F59C195388D20070C39A /* PoporPopNCAppDelegate.h */,
 				6003F59D195388D20070C39A /* PoporPopNCAppDelegate.m */,
@@ -293,7 +293,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1872926920DBB1E5008AE335 /* PoporPopNC-Info.plist in Resources */,
+				1872926920DBB1E5008AE335 /* PoporPopNC-Info.1plist in Resources */,
 				873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */,
 				71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
