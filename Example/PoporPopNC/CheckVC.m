@@ -18,7 +18,14 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
     self.title = @"check";
-    
+    {
+        UIBarButtonItem *item1 = [[UIBarButtonItem alloc] initWithTitle:@"next" style:UIBarButtonItemStylePlain target:self action:@selector(pushNextVC)];
+        self.navigationItem.rightBarButtonItems = @[item1];
+    }
+}
+
+- (void)pushNextVC {
+    [self.navigationController pushViewController:[CheckVC new] animated:YES];
 }
 
 /// 是否需要拦截系统返回按钮的事件，只有当这里返回YES的时候，才会询问方法：`canPopViewControllerByButton`,'canPopViewControllerByPopGestureRecognizer'

@@ -20,8 +20,11 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    PoporPopNC * nc = [[PoporPopNC alloc] initWithRootViewController:[PoporPopNCViewController new]];
+    PoporPopNC * nc = [[PoporPopNC alloc] initWithRootViewController:[PoporPopNCViewController new] updateBarBackTitle:YES barBackTitle:@"返回"];
+    //PoporPopNC * nc = [[PoporPopNC alloc] initWithRootViewController:[PoporPopNCViewController new] updateBarBackTitle:YES barBackTitle:@""];
+    
     nc.barBackImage = [UIImage imageNamed:@"NCBack"];
+    
     
     __weak typeof(nc) weakNC = nc;
     nc.barTitleColorStyleBlock = ^{

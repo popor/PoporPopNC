@@ -67,11 +67,23 @@
 #endif
 
 #pragma mark - 初始化
-- (instancetype)initWithRootViewController:(UIViewController *)rootViewController {
-    id nc = [super initWithRootViewController:rootViewController];
-    rootViewController.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
-    self.popAvailable = YES;
+- (instancetype)initWithRootViewController:(UIViewController *)rootViewController updateBarBackTitle:(BOOL)updateBarBackTitle barBackTitle:(NSString *)barBackTitle {
+    PoporPopNC * nc = [super initWithRootViewController:rootViewController];
+    nc.updateBarBackTitle = updateBarBackTitle;
+    nc.barBackTitle       = barBackTitle;
     
+    if (nc.isUpdateBarBackTitle) {
+        rootViewController.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:nc.barBackTitle style:UIBarButtonItemStylePlain target:nil action:nil];
+    }
+    
+    nc.popAvailable = YES;
+    
+    return nc;
+}
+
+- (instancetype)initWithRootViewController:(UIViewController *)rootViewController {
+    PoporPopNC * nc = [super initWithRootViewController:rootViewController];
+    nc.popAvailable = YES;
     return nc;
 }
 
@@ -128,15 +140,22 @@
 
 // 设置返回按钮title
 - (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated {
-    viewController.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
+    if (self.isUpdateBarBackTitle) {
+        viewController.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:self.barBackTitle style:UIBarButtonItemStylePlain target:nil action:nil];
+    }
     
-    if(![self.topViewController isMemberOfClass:[viewController class]]){
-        if (self.autoHidesBottomBarWhenPushed) {
-            if (self.viewControllers.count > 0) {
-                viewController.hidesBottomBarWhenPushed = YES;
+    if (self.forbiddenPushSameViewController) {
+        if(![self.topViewController isMemberOfClass:[viewController class]]){
+            if (self.autoHidesBottomBarWhenPushed) {
+                if (self.viewControllers.count > 0) {
+                    viewController.hidesBottomBarWhenPushed = YES;
+                }
             }
+            [super pushViewController:viewController animated:animated];
+        }else{
+            NSLog(@"PoporPopNC: forbidden Push Same ViewController.");
         }
-        
+    }else{
         [super pushViewController:viewController animated:animated];
     }
 }
