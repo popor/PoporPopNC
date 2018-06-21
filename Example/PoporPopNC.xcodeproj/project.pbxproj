@@ -158,7 +158,6 @@
 		6003F593195388D20070C39A /* Example for PoporPopNC */ = {
 			isa = PBXGroup;
 			children = (
-				1872926820DBB1E5008AE335 /* PoporPopNC-Info.plist */,
 				1872926020DB7E88008AE335 /* other */,
 				6003F59C195388D20070C39A /* PoporPopNCAppDelegate.h */,
 				6003F59D195388D20070C39A /* PoporPopNCAppDelegate.m */,
@@ -174,6 +173,7 @@
 		6003F594195388D20070C39A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				1872926820DBB1E5008AE335 /* PoporPopNC-Info.plist */,
 				6003F596195388D20070C39A /* InfoPlist.strings */,
 				6003F599195388D20070C39A /* main.m */,
 				6003F59B195388D20070C39A /* PoporPopNC-Prefix.pch */,
