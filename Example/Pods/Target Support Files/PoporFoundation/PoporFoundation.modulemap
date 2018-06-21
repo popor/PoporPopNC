@@ -1,0 +1,6 @@
+framework module PoporFoundation {
+  umbrella header "PoporFoundation-umbrella.h"
+
+  export *
+  module * { export * }
+}

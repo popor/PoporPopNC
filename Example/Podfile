@@ -1,0 +1,14 @@
+use_frameworks!
+
+target 'PoporPopNC_Example' do
+  pod 'PoporPopNC', :path => '../'
+
+  pod 'PoporFoundation/prefix'
+  pod 'PoporUI/UIImage'
+  
+  target 'PoporPopNC_Tests' do
+    inherit! :search_paths
+	
+    
+  end
+end

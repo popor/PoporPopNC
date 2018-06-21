@@ -1,0 +1,6 @@
+framework module PoporPopNC {
+  umbrella header "PoporPopNC-umbrella.h"
+
+  export *
+  module * { export * }
+}
