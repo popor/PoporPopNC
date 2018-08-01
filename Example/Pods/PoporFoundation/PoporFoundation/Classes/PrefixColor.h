@@ -1,32 +1,31 @@
 //
-//  ColorPrefix.h
+//  PrefixColor.h
 //  AppStore
 //
 //  Created by popor on 2017/7/5.
 //  Copyright © 2017年 popor. All rights reserved.
 //
 
+#import "PrefixOs.h"
+
 #import <CoreGraphics/CoreGraphics.h>
-#import <UIKit/UIKit.h>
 
 // need:UIKit,CoreGraphics
-CG_INLINE UIColor * RGBA(float R, float G, float B, float F) {
-    return [UIColor colorWithRed:R/255.0f green:G/255.0f blue:B/255.0f alpha:F];
+CG_INLINE COLOR_CLASS * RGBA(float R, float G, float B, float F) {
+    return [COLOR_CLASS colorWithRed:R/255.0f green:G/255.0f blue:B/255.0f alpha:F];
 };
 
 // need:UIKit,CoreGraphics
-CG_INLINE UIColor * RGB16(unsigned long rgbValue) {
-    return [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0];
+CG_INLINE COLOR_CLASS * RGB16(unsigned long rgbValue) {
+    return [COLOR_CLASS colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0];
 };
 
-CG_INLINE UIColor * RGB16A(unsigned long rgbValue, float F) {
-    return [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:F];
+CG_INLINE COLOR_CLASS * RGB16A(unsigned long rgbValue, float F) {
+    return [COLOR_CLASS colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:F];
 };
 
-#ifndef ColorPrefix_h
-#define ColorPrefix_h
-
-#define ColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
+#ifndef PrefixColor_h
+#define PrefixColor_h
 
 //------------------------------------------------------------------------------
 
@@ -60,4 +59,4 @@ CG_INLINE UIColor * RGB16A(unsigned long rgbValue, float F) {
 #define ColorTV_BG          ColorBG1
 #define ColorTV_separator   ColorLine
 
-#endif /* ColorPrefix_h */
+#endif /* PrefixColor_h */

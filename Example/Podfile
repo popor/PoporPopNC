@@ -3,7 +3,7 @@ use_frameworks!
 target 'PoporPopNC_Example' do
   pod 'PoporPopNC', :path => '../'
 
-  pod 'PoporFoundation/prefix'
+  pod 'PoporFoundation/PrefixCore'
   pod 'PoporUI/UIImage'
   
   target 'PoporPopNC_Tests' do

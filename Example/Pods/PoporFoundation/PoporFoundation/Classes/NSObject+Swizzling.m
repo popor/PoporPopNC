@@ -7,7 +7,6 @@
 //
 
 #import "NSObject+Swizzling.h"
-#import <objc/runtime.h>
 
 @implementation NSObject (Swizzling)
 

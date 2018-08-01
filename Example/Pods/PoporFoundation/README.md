@@ -19,6 +19,10 @@ it, simply add the following line to your Podfile:
 ```ruby
 pod 'PoporFoundation'
 ```
+1.Some safe function with runtime, NSArray, NSDictionary, NSURL etc. 
+2.Some useful tools
+
+增加了对macOS的兼容.
 
 ## Author
 
