@@ -111,7 +111,7 @@
 }
 
 //@{ NSFontAttributeName :[ UIFont fontWithName : @"Arial-BoldMT" size : 30 ], NSForegroundColorAttributeName :[ UIColor whiteColor ] }
-+ (UIImage *)image:(UIImage *)image str:(NSString *)str dic:(NSDictionary *)dic
++ (UIImage *)imageFromImage:(UIImage *)image str:(NSString *)str dic:(NSDictionary *)dic
 {
     CGSize size= CGSizeMake(image.size.width, image.size.height ); // 画布大小
     
@@ -269,6 +269,26 @@
     CGContextFillRect(context, rect);
     UIImage*newImage = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
+    return newImage;
+}
+
++ (UIImage *)imageFromImage:(UIImage *)image bgColor:(UIColor *)color {
+    CGSize size= CGSizeMake(image.size.width, image.size.height ); // 画布大小
+    
+    UIGraphicsBeginImageContextWithOptions (size, NO, [UIScreen mainScreen].scale);
+    
+    // 设置背景色
+    [color set];
+    UIRectFill(CGRectMake(0, 0, size.width, size.height));
+
+    [image drawAtPoint:CGPointMake (0 ,0)];
+    // 获得一个位图图形上下文
+    CGContextRef context= UIGraphicsGetCurrentContext ();
+    CGContextDrawPath (context, kCGPathStroke);
+    
+    UIImage *newImage= UIGraphicsGetImageFromCurrentImageContext ();
+    UIGraphicsEndImageContext ();
+    
     return newImage;
 }
 

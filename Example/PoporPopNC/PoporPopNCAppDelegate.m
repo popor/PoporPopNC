@@ -9,8 +9,8 @@
 #import "PoporPopNCAppDelegate.h"
 
 #import <PoporPopNC/PoporPopNC.h>
-#import <PoporFoundation/SizePrefix.h>
-#import <PoporFoundation/ColorPrefix.h>
+#import <PoporFoundation/PrefixSize.h>
+#import <PoporFoundation/PrefixColor.h>
 #import <PoporUI/UIImage+Tool.h>
 
 
