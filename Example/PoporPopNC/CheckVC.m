@@ -29,7 +29,7 @@
 }
 
 /// 是否需要拦截系统返回按钮的事件，只有当这里返回YES的时候，才会询问方法：`canPopViewControllerByButton`,'canPopViewControllerByPopGestureRecognizer'
-- (BOOL)shouldHoldBackButtonEvent {
+- (BOOL)shouldHoldPopEvent {
     return YES;
 }
 
