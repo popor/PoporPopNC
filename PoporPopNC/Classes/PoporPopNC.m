@@ -87,6 +87,20 @@
     return nc;
 }
 
+- (instancetype)initWithCoder:(NSCoder *)aDecoder {
+    PoporPopNC * nc = [super initWithCoder:aDecoder];
+    nc.popAvailable = YES;
+    return nc;
+}
+
+- (instancetype)init {
+    PoporPopNC * nc = [super init];
+    nc.popAvailable = YES;
+    return nc;
+}
+
+
+#pragma mark - 设置
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationBar.translucent = NO;
@@ -192,7 +206,7 @@
 #if !TARGET_IPHONE_SIMULATOR
 // 返回按钮+侧滑总入口
 - (BOOL)navigationBar:(UINavigationBar *)navigationBar shouldPopItem:(UINavigationItem *)item {
-    //NSLog(@"ParentNC总开关: 返回按钮_侧滑判断 0");
+    //NSLog(@"ParentNC总开关: 返回按钮_侧滑判断 0, %i-%i", self.isPopAvailable, self.isPopByGR);
     if (!self.isPopAvailable && !self.isPopByGR) {
         //NSLog(@"ParentNC总开关: 返回按钮_侧滑判断 1, 防止快速点击, 返回YES并且修正导航栏UI");
         [self resetSubviewsInNavBar:navigationBar];
@@ -246,9 +260,8 @@
 #pragma mark - 工具函数
 - (BOOL)canPopBtViewController:(UIViewController *)viewController {
     BOOL canPopViewController = YES;
-    
-    if ([viewController respondsToSelector:@selector(shouldHoldBackButtonEvent)] &&
-        [viewController shouldHoldBackButtonEvent] &&
+    if ([viewController respondsToSelector:@selector(shouldHoldPopEvent)] &&
+        [viewController shouldHoldPopEvent] &&
         [viewController respondsToSelector:@selector(canPopViewControllerByButton)] &&
         ![viewController canPopViewControllerByButton]) {
         canPopViewController = NO;
@@ -259,9 +272,8 @@
 
 - (BOOL)canPopInteractorViewController:(UIViewController *)viewController {
     BOOL canPopViewController = YES;
-    
-    if ([viewController respondsToSelector:@selector(shouldHoldBackButtonEvent)] &&
-        [viewController shouldHoldBackButtonEvent] &&
+    if ([viewController respondsToSelector:@selector(shouldHoldPopEvent)] &&
+        [viewController shouldHoldPopEvent] &&
         [viewController respondsToSelector:@selector(canPopViewControllerByPopGestureRecognizer)] &&
         ![viewController canPopViewControllerByPopGestureRecognizer]) {
         canPopViewController = NO;
