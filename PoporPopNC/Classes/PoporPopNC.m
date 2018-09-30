@@ -40,14 +40,26 @@
         //NSLog(@"ParentNC侧滑: Runtime交换pop函数 执行 1");
         self.popAvailable = NO;
         dispatch_async(dispatch_get_main_queue(), ^{
-            [self lockPopViewControllerAnimated:animated];
+            @try {
+                [self lockPopViewControllerAnimated:animated];
+            } @catch (NSException *exception) {
+                NSLog(@"exception: %@", [exception description]);
+            } @finally {
+                
+            }
             dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
                 self.popAvailable = YES;
             });
         });
     }else{
         dispatch_async(dispatch_get_main_queue(), ^{
-            [self lockPopViewControllerAnimated:animated];
+            @try {
+                [self lockPopViewControllerAnimated:animated];
+            } @catch (NSException *exception) {
+                NSLog(@"exception: %@", [exception description]);
+            } @finally {
+                
+            }
         });
         //NSLog(@"ParentNC侧滑: Runtime交换pop函数 异常执行 1");
     }

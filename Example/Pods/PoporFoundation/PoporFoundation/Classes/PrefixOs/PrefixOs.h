@@ -19,7 +19,7 @@
 
 #define FONT_CLASS  UIFont
 #define COLOR_CLASS UIColor
-
+#define IMAGE_CLASS UIImage
 
 // NS系列
 #elif TARGET_OS_MAC
@@ -31,6 +31,7 @@
 
 #define FONT_CLASS  NSFont
 #define COLOR_CLASS NSColor
+#define IMAGE_CLASS NSImage
 
 #endif
 

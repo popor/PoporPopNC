@@ -354,7 +354,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-PoporPopNC_Example/Pods-PoporPopNC_Example-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-PoporPopNC_Example/Pods-PoporPopNC_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/PoporFoundation/PoporFoundation.framework",
 				"${BUILT_PRODUCTS_DIR}/PoporPopNC/PoporPopNC.framework",
 				"${BUILT_PRODUCTS_DIR}/PoporUI/PoporUI.framework",
@@ -367,7 +367,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PoporPopNC_Example/Pods-PoporPopNC_Example-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PoporPopNC_Example/Pods-PoporPopNC_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */

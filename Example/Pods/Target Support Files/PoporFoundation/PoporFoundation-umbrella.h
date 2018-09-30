@@ -10,6 +10,7 @@
 #endif
 #endif
 
+#import "NSObject+performSelector.h"
 #import "NSObject+Swizzling.h"
 #import "PrefixBlock.h"
 #import "PrefixColor.h"

@@ -61,6 +61,14 @@
 -(UIImage *)scaleSize:(CGSize)size;
 -(UIImage *)scaleW:(CGFloat)width;
 
+/*
+ 作者：ITCodeShare
+ 链接：https://www.jianshu.com/p/99c3e6a6c033
+ 來源：简书
+ 简书著作权归作者所有，任何形式的转载都请联系作者获得授权并注明出处。
+ */
+#pragma mark - 图片压缩
+- (NSData *)compressWithMaxLength:(NSUInteger)maxLength;
 
 @end
 
