@@ -11,7 +11,6 @@
 #endif
 
 #import "PoporPopNC.h"
-#import "UIViewController+ncBar.h"
 #import "UIViewController+PoporPopCheck.h"
 
 FOUNDATION_EXPORT double PoporPopNCVersionNumber;

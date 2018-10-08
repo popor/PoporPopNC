@@ -29,17 +29,17 @@ typedef void(^BlockPID)               (id sender);
 
 #if TARGET_OS_IOS || TARGET_OS_TV || TARGET_OS_WATCH
 #import <UIKit/UIKit.h>
-typedef void(^BlockPUIButton)         (UIButton * bt);
-typedef void(^BlockPUIView)           (UIView * view);
-typedef void(^BlockPUIImageView)      (UIImageView * iv);
-typedef void(^BlockPUIViewController) (UIViewController * vc);
+typedef void(^BlockPButton)           (UIButton * bt);
+typedef void(^BlockPView)             (UIView * view);
+typedef void(^BlockPImageView)        (UIImageView * iv);
+typedef void(^BlockPViewController)   (UIViewController * vc);
 
 #elif TARGET_OS_MAC
 #import <AppKit/AppKit.h>
-typedef void(^BlockPUIButton)         (NSButton * bt);
-typedef void(^BlockPUIView)           (NSView * view);
-typedef void(^BlockPUIImageView)      (NSImageView * iv);
-typedef void(^BlockPUIViewController) (NSViewController * vc);
+typedef void(^BlockPButton)           (NSButton * bt);
+typedef void(^BlockPView)             (NSView * view);
+typedef void(^BlockPImageView)        (NSImageView * iv);
+typedef void(^BlockPViewController)   (NSViewController * vc);
 
 #endif
 

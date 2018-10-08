@@ -13,6 +13,7 @@
 
 #import <objc/runtime.h>
 #import <PoporFoundation/NSObject+Swizzling.h>
+#import <PoporUI/UIViewController+ncBar.h>
 
 @interface PoporPopNC () <UINavigationControllerDelegate>
 
@@ -161,7 +162,7 @@
 
 // 是否隐藏状态栏
 - (void)navigationController:(UINavigationController *)navigationController willShowViewController:(UIViewController *)viewController animated:(BOOL)animated {
-    [navigationController setNavigationBarHidden:viewController.needHiddenNVBar.boolValue animated:YES];
+    [navigationController setNavigationBarHidden:viewController.hiddenNcBar animated:YES];
 }
 
 // 设置返回按钮title

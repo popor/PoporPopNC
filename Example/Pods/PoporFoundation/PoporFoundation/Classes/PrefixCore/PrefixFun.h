@@ -67,10 +67,6 @@ dispatch_async(dispatch_get_main_queue(), block);\
 
 #endif
 
-static NSString * PhoneNumbers      = @"0123456789";
-static NSString * AppResignActiveNC = @"AppResignActiveNC";
-static NSString * AppResumeActiveNC = @"AppResumeActiveNC";
-
 #define IsIphoneDevice (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
 #define IsIpadDevice   (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
 

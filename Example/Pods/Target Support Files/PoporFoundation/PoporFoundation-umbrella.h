@@ -12,6 +12,12 @@
 
 #import "NSObject+performSelector.h"
 #import "NSObject+Swizzling.h"
+#import "NSString+email.h"
+#import "NSString+format.h"
+#import "NSString+IDCard.h"
+#import "NSString+MD5.h"
+#import "NSString+Size.h"
+#import "NSString+Tool.h"
 #import "PrefixBlock.h"
 #import "PrefixColor.h"
 #import "PrefixFont.h"

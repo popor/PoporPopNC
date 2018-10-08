@@ -26,6 +26,7 @@
 
 // 渐变色
 + (UIImage*)gradientImageWithBounds:(CGRect)bounds andColors:(NSArray*)colors gradientHorizon:(BOOL)gradientHorizon;
++ (UIImage*)gradientImageWithBounds:(CGRect)bounds andColors:(NSArray*)colors addStartPoint:(CGPoint)startPoint addEndPoint:(CGPoint)endPoint;
 
 #pragma mark - 根据图片
 + (UIImage *)imageFromImage:(UIImage *)image size:(CGSize)size;
@@ -49,7 +50,7 @@
 + (UIImage *)createWithImageName:(NSString *)imageName;
 + (UIImage *)createWithAbsImageName:(NSString *)imageName;
 
-+ (BOOL)saveImage:(UIImage *)image 	To:(NSString *)imagePath;
++ (BOOL)saveImage:(UIImage *)image     To:(NSString *)imagePath;
 
 + (NSString *)getAppLaunchImage;
 
