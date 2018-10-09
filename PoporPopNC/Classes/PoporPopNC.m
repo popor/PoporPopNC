@@ -170,19 +170,15 @@
     if (self.isUpdateBarBackTitle) {
         viewController.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:self.barBackTitle style:UIBarButtonItemStylePlain target:nil action:nil];
     }
-    
-    if (self.forbiddenPushSameViewController) {
-        if(![self.topViewController isMemberOfClass:[viewController class]]){
-            if (self.autoHidesBottomBarWhenPushed) {
-                if (self.viewControllers.count > 0) {
-                    viewController.hidesBottomBarWhenPushed = YES;
-                }
-            }
-            [super pushViewController:viewController animated:animated];
-        }else{
-            NSLog(@"PoporPopNC: forbidden Push Same ViewController.");
-        }
+    if (self.forbiddenPushSameViewController && [self.topViewController isMemberOfClass:[viewController class]]) {
+        // 禁止push相同的vc
+        NSLog(@"PoporPopNC: forbidden Push Same ViewController.");
     }else{
+        if (self.autoHidesBottomBarWhenPushed) {
+            if (self.viewControllers.count > 0) {
+                viewController.hidesBottomBarWhenPushed = YES;
+            }
+        }
         [super pushViewController:viewController animated:animated];
     }
 }
