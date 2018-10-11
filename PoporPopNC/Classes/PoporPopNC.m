@@ -80,20 +80,6 @@
 #endif
 
 #pragma mark - 初始化
-- (instancetype)initWithRootViewController:(UIViewController *)rootViewController updateBarBackTitle:(BOOL)updateBarBackTitle barBackTitle:(NSString *)barBackTitle {
-    PoporPopNC * nc = [super initWithRootViewController:rootViewController];
-    nc.updateBarBackTitle = updateBarBackTitle;
-    nc.barBackTitle       = barBackTitle;
-    
-    if (nc.isUpdateBarBackTitle) {
-        rootViewController.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:nc.barBackTitle style:UIBarButtonItemStylePlain target:nil action:nil];
-    }
-    
-    nc.popAvailable = YES;
-    
-    return nc;
-}
-
 - (instancetype)initWithRootViewController:(UIViewController *)rootViewController {
     PoporPopNC * nc = [super initWithRootViewController:rootViewController];
     nc.popAvailable = YES;
@@ -120,10 +106,6 @@
     self.delegate                  = self;
     
     [self setInteractivePopGRDelegate];
-}
-
-- (void)setBarTitleColorStyleBlock:(void (^)(void))barTitleColorStyleBlock {
-    barTitleColorStyleBlock();
 }
 
 - (void)setBarBackImage:(UIImage *)barBackImage{
@@ -168,7 +150,7 @@
 // 设置返回按钮title
 - (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated {
     if (self.isUpdateBarBackTitle) {
-        viewController.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:self.barBackTitle style:UIBarButtonItemStylePlain target:nil action:nil];
+        self.topViewController.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:self.barBackTitle style:UIBarButtonItemStylePlain target:nil action:nil];
     }
     if (self.forbiddenPushSameViewController && [self.topViewController isMemberOfClass:[viewController class]]) {
         // 禁止push相同的vc
