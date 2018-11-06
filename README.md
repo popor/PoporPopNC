@@ -20,6 +20,8 @@ it, simply add the following line to your Podfile:
 pod 'PoporPopNC'
 ```
 
+不再推荐使用,修改系统返回事件,引发的bug比较多,而且无法解决.
+
 在UINavigationController点击返回或者侧滑手势的时候,拦截系统函数,方法在PoporPopCheckDelegate中.
 本来是使用QMUI_iOS的,但是QMUI_iOS的触发机制有问题,方法名称是模仿的QMUI.
 经过几个月的使用,没有发生导航栏和vc不同步的bug.
